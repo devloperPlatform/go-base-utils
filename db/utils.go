@@ -2,7 +2,7 @@ package db
 
 import (
 	"fmt"
-	"gitee.com/dev-tools-platform/go-base-utils/env"
+	"github.com/devloperPlatform/go-base-utils/env"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"sync"

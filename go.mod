@@ -1,4 +1,4 @@
-module gitee.com/dev-tools-platform/go-base-utils
+module github.com/devloperPlatform/go-base-utils
 
 go 1.14
 
