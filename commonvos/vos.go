@@ -27,11 +27,9 @@ type InsideUserInfo struct {
 	EndUpdateTime   string   `json:"endUpdateTime,omitempty"`
 	EndLoginTime    string   `json:"endLoginTime,omitempty"`
 	Icon            string   `json:"icon,omitempty"`
-	BackgroundImage string   `json:"backgroundImage,omitempty"`
+	BackgroundImage string   `json:"backgroundImage,omitempty" gorm:"-"`
 	BackgroundColor string   `json:"backgroundColor,omitempty"`
-	SysFlagList     []string `json:"sysFlagList,omitempty"`
-	QueueHost       string   `json:"queueHost,omitempty"`
-	QueuePort       int      `json:"queuePort,omitempty"`
-	ServerPort      string   `json:"serverPort,omitempty"`
-	Token           string   `json:"token,omitempty"`
+	SysFlagList     []string `json:"sysFlagList,omitempty" gorm:"-"`
+	ServerPort      string   `json:"serverPort,omitempty" gorm:"-"`
+	Token           string   `json:"token,omitempty" gorm:"-"`
 }
