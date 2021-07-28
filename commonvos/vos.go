@@ -8,7 +8,7 @@ const (
 )
 
 type InsideUserInfo struct {
-	Id              int64    `json:"id,omitempty"`
+	Id              int64    `json:"id,omitempty" gorm:"primary_key;autoIncrement"`
 	Name            string   `json:"name,omitempty"`
 	Sex             Sex      `json:"sex,omitempty"`
 	Age             int      `json:"age,omitempty"`
