@@ -33,6 +33,6 @@ type InsideUserInfo struct {
 	ServerPort      string   `json:"serverPort,omitempty" gorm:"-"`
 	Token           string   `json:"token,omitempty" gorm:"-"`
 	DeptId          int      `json:"deptId,omitempty"`
-	JobId           int      `json:"jobIdm,omitempty"`
+	JobId           int      `json:"jobId,omitempty"`
 	PostsId         int      `json:"postsId,omitempty"`
 }
