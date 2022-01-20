@@ -13,7 +13,6 @@ type InsideUserInfo struct {
 	Sex             Sex      `json:"sex,omitempty"`
 	Age             int      `json:"age,omitempty"`
 	Birthday        string   `json:"birthday,omitempty"`
-	IdCode          string   `json:"idCode,omitempty"`
 	Phone           string   `json:"phone,omitempty"`
 	Email           string   `json:"email,omitempty"`
 	CompanyName     string   `json:"companyName,omitempty"`
