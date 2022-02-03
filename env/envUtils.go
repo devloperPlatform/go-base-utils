@@ -3,10 +3,12 @@ package env
 import (
 	"coder.byzk.cn/golibs/common/logs"
 	"os"
+	"strconv"
 	"strings"
 )
 
 type GetFn func() string
+type GetIntFn func() int
 
 // GetEnvOrDefault 获取环境变量或默认值
 func GetEnvOrDefault(name, defaultValue string) GetFn {
@@ -26,5 +28,20 @@ func GetEnvReplaceNewlineChar(name, defaultValue string) GetFn {
 	newVal := strings.ReplaceAll(val, "\\n", "\n")
 	return func() string {
 		return newVal
+	}
+}
+
+// GetIntEnvOrDefault 获取int类型的环境变量
+func GetIntEnvOrDefault(name string, defaultVal int) GetIntFn {
+	res := defaultVal
+	val := os.Getenv(name)
+	if val != "" {
+		r, err := strconv.Atoi(val)
+		if err == nil {
+			res = r
+		}
+	}
+	return func() int {
+		return res
 	}
 }
